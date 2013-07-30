@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location_id: 1
+  description: MyText
+  type_id: 1
+  from_date: 2013-07-30
+  from_time: 2013-07-30 16:55:20
+  to_date: 2013-07-30
+  to_time: 2013-07-30 16:55:20
+
+two:
+  location_id: 1
+  description: MyText
+  type_id: 1
+  from_date: 2013-07-30
+  from_time: 2013-07-30 16:55:20
+  to_date: 2013-07-30
+  to_time: 2013-07-30 16:55:20
