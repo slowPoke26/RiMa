@@ -1,4 +1,7 @@
 RiMa::Application.routes.draw do
+  resources :periods
+
+
   resources :risks
 
 

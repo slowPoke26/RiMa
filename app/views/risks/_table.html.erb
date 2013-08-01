@@ -7,6 +7,7 @@
     <th>From time</th>
     <th>To date</th>
     <th>To time</th>
+    <th>Periods</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,6 +22,7 @@
     <td><%= risk.from_time %></td>
     <td><%= risk.to_date %></td>
     <td><%= risk.to_time %></td>
+    <td><%= risk.periods.count %></td>
     <td><%= link_to 'Show', risk %></td>
     <td><%= link_to 'Edit', edit_risk_path(risk) %></td>
     <td><%= link_to 'Destroy', risk, method: :delete, data: { confirm: 'Are you sure?' } %></td>

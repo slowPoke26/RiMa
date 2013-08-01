@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  risk_id: 1
+  from_date: 2013-08-01
+  from_time: 2013-08-01 15:47:15
+  to_date: 2013-08-01
+  to_time: 2013-08-01 15:47:15
+
+two:
+  risk_id: 1
+  from_date: 2013-08-01
+  from_time: 2013-08-01 15:47:15
+  to_date: 2013-08-01
+  to_time: 2013-08-01 15:47:15

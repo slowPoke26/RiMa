@@ -11,13 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730145520) do
+ActiveRecord::Schema.define(:version => 20130801134715) do
 
   create_table "locations", :force => true do |t|
     t.string   "name"
     t.float    "latitude"
     t.float    "longitude"
     t.float    "radius"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "periods", :force => true do |t|
+    t.integer  "risk_id"
+    t.date     "from_date"
+    t.time     "from_time"
+    t.date     "to_date"
+    t.time     "to_time"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
