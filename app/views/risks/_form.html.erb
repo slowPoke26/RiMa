@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :location_id %><br />
-    <%= f.number_field :location_id %>
+    <%= f.select :location_id, Location.all.map {|x| [x.name, x.id]} %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :type_id %><br />
-    <%= f.number_field :type_id %>
+    <%= f.select :type_id, Type.all.map {|x| [x.name, x.id]} %>
   </div>
   <div class="field">
     <%= f.label :from_date %><br />
