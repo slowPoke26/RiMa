@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <p>
   <b>Name:</b>
   <%= @type.name %>
 </p>
+
+<%= render :partial => "risks/table", :locals => { :risks => @type.risks } %>
 
 
 <%= link_to 'Edit', edit_type_path(@type) %> |
