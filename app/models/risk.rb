@@ -5,4 +5,14 @@ class Risk < ActiveRecord::Base
   has_many :periods
   
   accepts_nested_attributes_for :periods
+  
+  def self.search(search)
+    if search
+      search_condition = "%" + search + "%"
+      find(:all, :condition => ['description LIKE ?', search_condition])
+    else
+      find(:all)
+    end
+  end
+  
 end

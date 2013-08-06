@@ -2,7 +2,7 @@
 
 <p>
   <b>Location:</b>
-  <%= @risk.location_id %>
+  <%= @risk.location.name %>
 </p>
 
 <p>
@@ -12,9 +12,9 @@
 
 <p>
   <b>Type:</b>
-  <%= @risk.type_id %>
+  <%= @risk.type.name %>
 </p>
-
+<!--
 <p>
   <b>From date:</b>
   <%= @risk.from_date %>
@@ -33,6 +33,25 @@
 <p>
   <b>To time:</b>
   <%= @risk.to_time %>
+</p> -->
+<br />
+
+
+<p>
+  
+  <% @risk.periods.each do |periodo| %>
+  <br />
+  <b>Period:</b> 
+    <%= periodo.from_date %> - 
+    <%= periodo.to_date %>
+  <br />
+  <b>Probability:</b>
+    <%= Period.probability_to_text(periodo.probability) %>
+  <br />
+  <b>Impact:</b>
+    <%= Period.impact_to_text(periodo.impact) %>
+  <br />
+  <% end %>
 </p>
 
 

@@ -1,5 +1,12 @@
 <h1>Listing risks</h1>
 
+<%= form_tag(risks_path, :method => "get", class: "navbar-form", id: "search-form") do %>
+<p>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %>
+</p>
+<% end %>
+
 <%= render :partial => "table", :locals => { :risks => @risks } %>
 
 <br />

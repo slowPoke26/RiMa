@@ -40,12 +40,21 @@
     <%= f.time_select :to_time %>
   </div>
   
+  <br />
+  
   <div>
   <%= f.fields_for :periods do |period_form| %>
-    <%= period_form.date_select :from_date %>
-    <%= period_form.time_select :from_time %>
-    <%= period_form.date_select :to_date %>
-    <%= period_form.time_select :to_time %>
+    <br />
+    <%= period_form.label "From:"%><br />
+    <%= period_form.date_select :from_date %><br />
+    <%= period_form.time_select :from_time %><br />
+    <%= period_form.label "To:"%><br />
+    <%= period_form.date_select :to_date %><br />
+    <%= period_form.time_select :to_time %><br />
+    <%= period_form.label "Probability"%><br />
+    <%= period_form.number_field :probability %><br />
+    <%= period_form.label "Impact"%><br />
+    <%= period_form.number_field :impact %>
     <%= period_form.link_to_remove "Remove this period" %>
   <% end %>
   <p><%= f.link_to_add "Add a period", :periods %></p>
