@@ -1,0 +1,12 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true]
+	"Period" [shape=Mrecord, label="{Period|id :integer\lrisk_id :integer\lfrom_date :date\lfrom_time :time\lto_date :date\lto_time :time\lcreated_at :datetime\lupdated_at :datetime\lprobability :integer\limpact :integer\l}"]
+	"Location" [shape=Mrecord, label="{Location|id :integer\lname :string\llatitude :float\llongitude :float\lradius :float\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Type" [shape=Mrecord, label="{Type|id :integer\lname :string\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Risk" [shape=Mrecord, label="{Risk|id :integer\llocation_id :integer\ldescription :text\ltype_id :integer\lfrom_date :date\lfrom_time :time\lto_date :date\lto_time :time\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Impact" [shape=Mrecord, label="{Impact|impact_type :string\lscale0 :string\lscale1 :string\lscale2 :string\lscale3 :string\lscale4 :string\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Period" -> "Impact" [arrowtail=odot, arrowhead=crow, dir=both color="#ADD725"]
+	"Location" -> "Risk" [arrowtail=odot, arrowhead=crow, dir=both color="#BFCD65"]
+	"Type" -> "Risk" [arrowtail=odot, arrowhead=crow, dir=both color="#8CD2D3"]
+	"Risk" -> "Period" [arrowtail=odot, arrowhead=crow, dir=both color="#4BDBE6"]
+}

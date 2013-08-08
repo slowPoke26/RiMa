@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130806140906) do
+ActiveRecord::Schema.define(:version => 20130807132438) do
+
+  create_table "impacts", :id => false, :force => true do |t|
+    t.string   "impact_type"
+    t.string   "scale0"
+    t.string   "scale1"
+    t.string   "scale2"
+    t.string   "scale3"
+    t.string   "scale4"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "impacts", ["impact_type"], :name => "index_impacts_on_impact_type", :unique => true
 
   create_table "locations", :force => true do |t|
     t.string   "name"

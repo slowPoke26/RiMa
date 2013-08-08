@@ -8,7 +8,35 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">RiMa</a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><%= link_to "Risks", root_path %></li>
+          <li><%= link_to "Risk Types", types_path %></li>
+          <li><%= link_to "Locations", locations_path %></li>
+          <li><%= link_to "Periods", periods_path %></li>
+        </ul>
+      </div>
+       
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="span12"><%= yield %></div>
+  </div>
+</div>
+
 
 </body>
 </html>

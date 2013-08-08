@@ -3,7 +3,7 @@
 <%= form_tag(risks_path, :method => "get", class: "navbar-form", id: "search-form") do %>
 <p>
   <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search", :name => nil %>
+  <%= submit_tag "Search", :class => "btn", :name => nil %>
 </p>
 <% end %>
 
@@ -11,4 +11,4 @@
 
 <br />
 
-<%= link_to 'New Risk', new_risk_path %>
+<a class="btn btn-large btn-info" href=<%= new_risk_path %>>New Risk</a>

@@ -3,7 +3,7 @@ class RisksController < ApplicationController
   # GET /risks.json
   def index
     @risks = Risk.all
-    @risks = Risk.order("description").paginate :page => params['page'], :per_page => 2
+    @risks = Risk.order("description").paginate :page => params['page'], :per_page => 5
 
     respond_to do |format|
       format.html # index.html.erb

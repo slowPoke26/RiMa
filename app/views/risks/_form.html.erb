@@ -45,6 +45,7 @@
   <div>
   <%= f.fields_for :periods do |period_form| %>
     <br />
+    <% hash = Hash[Period.probability_strings.map.with_index.to_a] %>
     <%= period_form.label "From:"%><br />
     <%= period_form.date_select :from_date %><br />
     <%= period_form.time_select :from_time %><br />
@@ -52,9 +53,9 @@
     <%= period_form.date_select :to_date %><br />
     <%= period_form.time_select :to_time %><br />
     <%= period_form.label "Probability"%><br />
-    <%= period_form.number_field :probability %><br />
+    <%= period_form.select :probability, Period.probability_strings.map {|x| [x.to_s, hash[x.to_s]]} %><br />
     <%= period_form.label "Impact"%><br />
-    <%= period_form.number_field :impact %>
+    <%= period_form.number_field :impact %><br />
     <%= period_form.link_to_remove "Remove this period" %>
   <% end %>
   <p><%= f.link_to_add "Add a period", :periods %></p>
